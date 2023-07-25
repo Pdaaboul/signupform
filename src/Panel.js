@@ -15,6 +15,7 @@ export default function Panel() {
       ...obj,
       [name]: inputValue,
     });
+    console.log(obj);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -39,6 +40,7 @@ export default function Panel() {
           placeholder="Email address"
           className="form--input"
           onChange={handleChange}
+          value={obj.email}
         />
         <input
           type="password"
@@ -46,6 +48,7 @@ export default function Panel() {
           className="form--input"
           name="password"
           onChange={handleChange}
+          value={obj.password}
         />
         <input
           type="password"
@@ -53,6 +56,7 @@ export default function Panel() {
           placeholder="Confirm password"
           className="form--input"
           onChange={handleChange}
+          value={obj.passwordConfirm}
         />
 
         <div className="form--marketing">
